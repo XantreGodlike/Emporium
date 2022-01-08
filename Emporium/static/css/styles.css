@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Catamaran:wght@400;500&display=swap');
+
+:root {
+  font-family: 'Catamaran', sans-serif;
+  --main: #6667AB;
+  --main-lighter: #7879B5;
+}
+
+body {
+  margin: 0px;
+}
+
+
+#header {
+  background: var(--main);
+  height: 27vh;
+  padding: 3.7vh 1.3vw 3.7vh 1.3vw;
+  /* margin: 75px 30px 75px 30px; */
+  display: grid;
+  grid-template: calc(85/320*100%) calc(75/320*100%) calc(85/320*100%) 1fr / 13.5vw 50vw 11.2vw 11.7vw 1fr;
+  /* grid-template-rows: fr; */
+  grid-template-areas:
+    "logo . cart support account"
+    ". . . . ."
+    ". search search search ."
+    ". . . . .";
+  /* justify-items: center; */
+  /* align-items: start; */
+}
+
+#search {
+  grid-area: search;
+  align-self: center;
+  /* width: 67vw; */
+  /* height: 7.8vh; */
+  height: 100%;
+  border-radius: 5px;
+  background-color: var(--main-lighter);
+}
+
+#cart {
+  grid-area: cart;
+  background-color: var(--main-lighter);
+}
+
+#support {
+  grid-area: support;
+  background-color: var(--main-lighter);
+}
+
+#account {
+  grid-area: account;
+  background-color: var(--main-lighter);
+}
+
+#logo {
+  grid-area: logo;
+}
+
+.button {
+  width: calc(200/240*100%);
+  border-radius: 5px;
+}
