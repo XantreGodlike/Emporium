@@ -1,9 +1,17 @@
+{% load static %}
 <div id="header">
   <img src="" alt="logo" id="logo">
   <div id="flex-buttons">
-    <div id="cart" class="button">1</div>
-    <div id="support" class="button">1</div>
-    <div id="account" class="button">1</div>
+    <div id="cart" class="button">
+      <img src="{% static 'svg/cart_icon.svg' %}" alt="Cart" id="cart-icon">
+    </div>
+    <div id="support" class="button">
+      <!-- <div id="support-button">Support</div> -->
+      <div class="button-text">Support</div>
+    </div>
+    <div id="account" class="button">
+      <div class="button-text" id="account-button">Account</div>
+    </div>
   </div>
   <div id="search">1</div>
 </div>

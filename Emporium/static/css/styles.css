@@ -4,6 +4,8 @@
   font-family: 'Catamaran', sans-serif;
   --main: #6667AB;
   --main-lighter: #7879B5;
+  --text-color: #E8E8E8;
+  --header-size: 27vh;
 }
 
 body {
@@ -13,7 +15,7 @@ body {
 
 #header {
   background: var(--main);
-  height: 27vh;
+  height: var(--header-size);
   padding: 3.7vh 1.3vw 3.7vh 1.3vw;
   /* margin: 75px 30px 75px 30px; */
   display: grid;
@@ -51,6 +53,11 @@ body {
   background-color: var(--main-lighter);
 }
 
+#cart-icon {
+  height: calc(55/85*100%);
+  flex: 1;
+}
+
 #support {
   flex: 1.25;
   background-color: var(--main-lighter);
@@ -61,10 +68,28 @@ body {
   background-color: var(--main-lighter);
 }
 
+#account-button {
+  font-weight: 500;
+}
+
+.button-text {
+  flex: 1;
+  font-weight: 400;
+  text-align: center;
+  color: var(--text-color);
+  font-size: calc(40/320*var(--header-size));
+  /* Поплывёт при изменении размера header */
+}
+
 #logo {
   grid-area: logo;
 }
 
 .button {
   border-radius: 5px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-items: center;
+  align-items: center;
 }
