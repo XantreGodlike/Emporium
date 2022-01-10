@@ -1,11 +1,15 @@
-@import url('https://fonts.googleapis.com/css2?family=Catamaran:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Catamaran:wght@400;500&family=Nunito+Sans&display=swap');
+@import 'search.css';
 
 :root {
   font-family: 'Catamaran', sans-serif;
   --main: #6667AB;
   --main-lighter: #7879B5;
+  --main-hover: #9678B5;
   --text-color: #E8E8E8;
   --header-size: 27vh;
+  --main-shadow: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  --header-font-size: calc(40/320*var(--header-size));
 }
 
 body {
@@ -38,34 +42,23 @@ body {
   gap: calc(40/650*100%);
 }
 
-#search {
-  grid-area: search;
-  align-self: center;
-  /* width: 67vw; */
-  /* height: 7.8vh; */
-  height: 100%;
-  border-radius: 5px;
-  background-color: var(--main-lighter);
-}
-
 #cart {
   flex: 1;
-  background-color: var(--main-lighter);
+
 }
 
 #cart-icon {
   height: calc(55/85*100%);
   flex: 1;
+  filter: var(--main-shadow);
 }
 
 #support {
   flex: 1.25;
-  background-color: var(--main-lighter);
 }
 
 #account {
   flex: 1.25;
-  background-color: var(--main-lighter);
 }
 
 #account-button {
@@ -77,8 +70,8 @@ body {
   font-weight: 400;
   text-align: center;
   color: var(--text-color);
-  font-size: calc(40/320*var(--header-size));
-  /* Поплывёт при изменении размера header */
+  font-size: var(--header-font-size);
+  filter: var(--main-shadow);
 }
 
 #logo {
@@ -90,6 +83,31 @@ body {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
+  background-color: var(--main-lighter);
   justify-items: center;
   align-items: center;
+  filter: drop-shadow(0px 0px 50px rgba(0, 0, 0, 0.05));
+}
+
+#logo {
+  filter: var(--main-shadow);
+  padding: calc((7/400)*var(--header-size)) calc((25 / 1770) * (100vh - 1.3vh * 2));
+  height: calc(89/400*var(--header-size));
+}
+
+
+.button:hover {
+  cursor: pointer;
+
+  animation: button-hover 500ms ease forwards;
+  /* background-color: var(--main-hover); */
+}
+
+
+@keyframes button-hover {
+  from {}
+
+  to {
+    filter: drop-shadow(0px 0px 1vh rgba(0, 0, 0, 0.3)) brightness(120%);
+  }
 }

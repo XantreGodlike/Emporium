@@ -1,6 +1,6 @@
 {% load static %}
 <div id="header">
-  <img src="" alt="logo" id="logo">
+  <img src="{% static 'svg/logo.svg' %}" alt="logo" id="logo">
   <div id="flex-buttons">
     <div id="cart" class="button">
       <img src="{% static 'svg/cart_icon.svg' %}" alt="Cart" id="cart-icon">
@@ -13,5 +13,10 @@
       <div class="button-text" id="account-button">Account</div>
     </div>
   </div>
-  <div id="search">1</div>
+  <div id="search">
+    <img src="{% static 'svg/search_icon.svg' %}" alt="Search" id="search-icon">
+    <form action="" method="GET" id="search-form">
+      <input type="text" name="requirement" id="search-field" placeholder="Search...">
+    </form>
+  </div>
 </div>
