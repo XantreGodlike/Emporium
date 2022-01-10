@@ -48,3 +48,9 @@
   align-items: center;
   gap: 0px 10px;
 }
+
+@media (max-width: 1200px) {
+  #search-field {
+    font-size: calc(var(--header-font-size)*1.5);
+  }
+}

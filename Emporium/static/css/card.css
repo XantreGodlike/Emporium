@@ -58,7 +58,8 @@
 }
 
 .like {
-  align-self: flex-end;
+  align-self: flex-start;
+  justify-self: flex-end;
   width: var(--card-heart-width);
 }
 
