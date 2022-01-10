@@ -1,0 +1,52 @@
+:root {
+  --card-height: (500 / 1080) * 100vh;
+  --card-width: calc(var(--card-height) / 5 * 4);
+  --card-margin: calc(78 / 400 / 2 * var(--card-width));
+  --card-font-size: calc(24 / 500 * var(--card-height));
+  --card-heart-width: calc(36 / 400 * var(--card-width));
+  --card-color: #FFF;
+  --card-shadow: 0px 0px 50px rgba(0, 0, 0, 0.05);
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  height: var(--card-height);
+  width: var(--card-width);
+  padding: calc(25/500 * var(--card-height)) 0px;
+  gap: calc(25 / 500 * var(--card-height));
+  background: var(--card-color);
+  box-shadow: var(--card-shadow);
+}
+
+.card-line {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  margin: 0px var(--card-margin);
+  max-width: 100%;
+}
+
+.item-photo {
+  width: 100%;
+  max-height: calc(277/500*var(--card-height));
+  object-fit: cover;
+}
+
+.price {
+  flex: 1;
+  font-family: 'Source Sans Pro', sans-serif;
+  align-self: flex-start;
+  font-size: calc(var(--card-font-size) * 1.5);
+}
+
+.like {
+  align-self: flex-end;
+  width: var(--card-heart-width);
+}
+
+.description {
+  font-size: var(--card-font-size);
+  flex: 1;
+  font-family: 'Lato', sans-serif;
+}
