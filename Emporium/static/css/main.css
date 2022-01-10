@@ -1,6 +1,8 @@
 :root {
   --continer-margin: calc(33 / 1080 * 100vh) calc(75 / 1920 * 100vw);
-  --cards-gap: calc(45/1080*100vh) calc(60/1920*100vw);
+  --cards-gap-height: calc(45/1080*100vh);
+  --cards-gap-width: calc(60/1920*100vw);
+  --cards-gap: var(--cards-gap-height) var(--cards-gap-width);
 }
 
 .container {
@@ -11,4 +13,35 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   gap: var(--cards-gap);
+  padding-bottom: var(--cards-gap-height);
+}
+
+
+h1 {
+  font-family: 'Raleway', sans-serif;
+  color: #747474;
+  font-size: calc(60 / 1920 * 100vh);
+  padding-bottom: calc(60 / 1080 * 100vh);
+  margin: 0px;
+}
+
+@media (orientation: portrait) {
+  .cards-container {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  h1 {
+    font-size: calc(110 / 1920 * 100vw);
+  }
+}
+
+.divider-image {
+  width: 100%;
+}
+
+@media (orientation: landscape) and (min-width: 2000px) {
+  .cards-container {
+    grid-template-columns: repeat(6, 1fr);
+    --cards-gap: var(--cards-gap-height) calc(var(--cards-gap-width) / 8 * 4);
+  }
 }
