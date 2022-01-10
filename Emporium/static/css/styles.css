@@ -22,7 +22,7 @@ body {
 #header {
   background: var(--main);
   height: var(--header-size);
-  padding: 3.7vh 1.3vw 3.7vh 1.3vw;
+  padding: 3.7vh 1.3vw;
   /* margin: 75px 30px 75px 30px; */
   display: grid;
   grid-template: calc(85/320*100%) calc(75/320*100%) calc(85/320*100%) 1fr / calc(240/1770*100%) calc(880/1770*100%) calc(405/1770*100%) 1fr;

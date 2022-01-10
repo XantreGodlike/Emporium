@@ -1,6 +1,10 @@
 :root {
-  --card-height: (500 / 1080) * 100vh;
-  --card-width: calc(var(--card-height) / 5 * 4);
+  --card-height: calc(var(--card-width) * 5 / 4)
+    /*(500 / 1080) * 100vh*/
+  ;
+  --card-width: calc(400 / 1920 * 100vw)
+    /*calc(var(--card-height) / 5 * 4)*/
+  ;
   --card-margin: calc(78 / 400 / 2 * var(--card-width));
   --card-font-size: calc(24 / 500 * var(--card-height));
   --card-heart-width: calc(36 / 400 * var(--card-width));
@@ -30,7 +34,7 @@
 .item-photo {
   width: 100%;
   max-height: calc(277/500*var(--card-height));
-  object-fit: cover;
+  object-fit: scale-down;
 }
 
 .price {
