@@ -36,7 +36,7 @@
   border-radius: 5px;
 }
 
-.card-line {
+.card__line {
   flex: 1;
   display: flex;
   flex-direction: row;
@@ -44,26 +44,26 @@
   max-width: 100%;
 }
 
-.item-photo {
+.card__photo {
   width: 100%;
   max-height: calc(277/500*var(--card-height));
   object-fit: scale-down;
 }
 
-.price {
+.card__line__price {
   flex: 1;
   font-family: 'Source Sans Pro', sans-serif;
   align-self: flex-start;
   font-size: calc(var(--card-font-size) * 1.5);
 }
 
-.like {
+.card__line__like {
   align-self: flex-start;
   justify-self: flex-end;
   width: var(--card-heart-width);
 }
 
-.description {
+.card__description {
   font-size: var(--card-font-size);
   flex: 1;
   font-family: 'Lato', sans-serif;
