@@ -1,23 +1,35 @@
 {% load static %}
 <div class="header">
-  <img src="{% static 'svg/logo.svg' %}" alt="logo" class="logo">
+  <img src="{% static 'svg/logo.svg' %}" alt="logo" class="logo" />
   <div class="flex-buttons">
     <div class="cart button">
-      <img src="{% static 'svg/cart_icon.svg' %}" alt="Cart" class="cart__icon">
+      <img
+        src="{% static 'svg/cart_icon.svg' %}"
+        alt="Cart"
+        class="cart__icon"
+      />
     </div>
     <div class="support button">
       <!-- <div class="support-button">Support</div> -->
       <div class="button__text">Support</div>
     </div>
-    <div class="account" class="button">
+    <div class="account button">
       <div class="button__text account__button">Account</div>
     </div>
   </div>
   <div class="search">
-    <img src="{% static 'svg/search_icon.svg' %}" alt="Search" class="search__icon">
+    <img
+      src="{% static 'svg/search_icon.svg' %}"
+      alt="Search"
+      class="search__icon"
+    />
     <form action="" method="GET" class="search__form">
-      <input type="text" name="requirement" class="search__form__field" placeholder="Search...">
-      <input type="submit" value=">" class="search__form__submit">
+      <input
+        type="text"
+        name="requirement"
+        class="search__form__field"
+        placeholder="Search..."
+      />
     </form>
   </div>
 </div>

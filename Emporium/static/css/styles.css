@@ -1,14 +1,14 @@
-@import url('https://fonts.googleapis.com/css2?family=Catamaran:wght@400;500;700&family=Lato&family=Nunito+Sans&family=Raleway:wght@200&family=Source+Sans+Pro&display=swap');
-@import 'search.css';
-@import 'card.css';
-@import 'main.css';
+@import url("https://fonts.googleapis.com/css2?family=Catamaran:wght@400;500;700&family=Lato&family=Nunito+Sans&family=Raleway:wght@200&family=Source+Sans+Pro&display=swap");
+@import "search.css";
+@import "card.css";
+@import "main.css";
 
 :root {
-  font-family: 'Catamaran', sans-serif;
-  --main: #6667AB;
-  --main-lighter: #7879B5;
-  --main-hover: #9678B5;
-  --text-color: #E8E8E8;
+  font-family: "Catamaran", sans-serif;
+  --main: #6667ab;
+  --main-lighter: #7879b5;
+  --main-hover: #9678b5;
+  --text-color: #e8e8e8;
   --header-size: 27vh;
   --main-shadow: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
   --header-font-size: calc(30 / 320 * var(--header-size));
@@ -18,13 +18,16 @@ body {
   margin: 0px;
 }
 
-
 .header {
   background: var(--main);
   height: var(--header-size);
   padding: 3.7vh 1.3vw;
   display: grid;
-  grid-template: calc(85/320*100%) calc(75/320*100%) calc(85/320*100%) 1fr / calc(240/1770*100%) calc(880/1770*100%) calc(405/1770*100%) 1fr;
+  grid-template: calc(85 / 320 * 100%) calc(75 / 320 * 100%) calc(
+      85 / 320 * 100%
+    ) 1fr / calc(240 / 1770 * 100%) calc(880 / 1770 * 100%) calc(
+      405 / 1770 * 100%
+    ) 1fr;
   grid-template-areas:
     "logo . buttons buttons"
     ". . . ."
@@ -40,7 +43,7 @@ body {
   flex-wrap: nowrap;
   flex-direction: row;
   flex-basis: content;
-  gap: calc(40/650*100%);
+  gap: calc(40 / 650 * 100%);
 }
 
 @media (orientation: portrait) {
@@ -51,7 +54,6 @@ body {
 
 .cart {
   flex: 1;
-
 }
 
 .cart__icon {
@@ -96,10 +98,10 @@ body {
 .logo {
   grid-area: logo;
   filter: var(--main-shadow);
-  padding: calc((7/400)*var(--header-size)) calc((25 / 1770) * (100vh - 1.3vh * 2));
-  height: calc(89/400*var(--header-size));
+  padding: calc((7 / 400) * var(--header-size))
+    calc((25 / 1770) * (100vh - 1.3vh * 2));
+  height: calc(89 / 400 * var(--header-size));
 }
-
 
 .button:hover {
   cursor: pointer;
@@ -108,18 +110,11 @@ body {
   /* background-color: var(--main-hover); */
 }
 
-
 @keyframes button-hover {
-  from {}
+  from {
+  }
 
   to {
     filter: drop-shadow(0px 0px 1vh rgba(0, 0, 0, 0.3)) brightness(120%);
   }
 }
-
-
-/* @media (min-width: 2000px) {
-  :root {
-    --header-font-size: calc(20 / 320 * var(--header-size));
-  }
-} */
