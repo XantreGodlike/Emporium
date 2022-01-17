@@ -5,6 +5,5 @@ class HomePage(TemplateView):
     template_name = 'index.htm'
     # template_name = 'about.htm'
 
-    def get_context_data(self, **kwargs: any) -> dict[str, any]:
+    def get_context_data(self, **kwargs: any) -> dict:
         return super().get_context_data(**kwargs)
-    

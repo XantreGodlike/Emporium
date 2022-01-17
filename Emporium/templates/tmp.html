@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Заголовок страницы</title>
+</head>
+  <body>
+    {% for el in news %}
+    <div class = "alert-warning">
+    <h3>{{ el.title }}</h3>
+    <p>{{ el.body }}</p>
+    </div>
+    {% endfor%}
+  </body>
+</html>
